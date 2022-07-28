@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    color: #2f243b;
+}
+
+
+h1 {
+  font-weight: 900;
+  font-size: 7rem;
+
+  span {
+    background: -webkit-linear-gradient(45deg, #0080EF,#00DCD9 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.glass-title {
+  color: rgba(47, 36, 59, 0.65) ;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "todo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "watch:sass": "node-sass --watch src/styles/scss/main.scss src/styles/main.css",
+    "compile:sass": "node-sass src/styles/scss/main.scss src/styles/main.comp.css",
+    "compress:css": "node-sass src/styles/main.prefix.css src/styles/main.css --output-style compressed",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/styles/main.comp.css -o src/styles/main.prefix.css",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "dependencies": {
+    "@types/react-transition-group": "^4.4.5",
+    "@types/uuid": "^8.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "autoprefixer": "^10.4.7",
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
+  }
+}

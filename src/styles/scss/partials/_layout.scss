@@ -1,0 +1,37 @@
+@import "animations";
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+          'header'
+          'main'
+          'footer';
+  grid-template-rows: 150px 1fr 100px;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(0,220,217,0.3) 0%, rgb(255, 255, 255) 60%);
+  background-size: 200%;
+  backdrop-filter: blur(50px);
+  animation: aurora 30s infinite;
+
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    main {
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

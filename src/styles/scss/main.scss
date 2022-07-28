@@ -1,0 +1,19 @@
+@import './partials/_typography.scss';
+@import './partials/_variables.scss';
+@import './partials/_mixins.scss';
+@import './partials/_animations.scss';
+@import './partials/_layout.scss';
+@import './partials/_components.scss';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+}
