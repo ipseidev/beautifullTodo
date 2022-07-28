@@ -1,20 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./mixins";
 * {
-    font-family: 'Inter', sans-serif;
-    color: #2f243b;
+  font-family: "Inter", sans-serif;
+  color: #2f243b;
 }
-
 
 h1 {
   font-weight: 900;
   font-size: 7rem;
 
   span {
-    background: -webkit-linear-gradient(45deg, #0080EF,#00DCD9 );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include primary-text-gradient;
   }
 }
 
@@ -24,5 +20,18 @@ h2 {
 }
 
 .glass-title {
-  color: rgba(47, 36, 59, 0.65) ;
+  color: rgba(47, 36, 59, 0.65);
+}
+
+.glass-title-light {
+  color: rgba(47, 36, 59, 0.3);
+  font-weight: 400;
+}
+
+.fa-circle-check {
+  @include primary-text-gradient;
+}
+
+.fa-solid {
+  @include primary-transition;
 }

@@ -1,0 +1,17 @@
+@mixin primary-text-gradient {
+  background: -webkit-linear-gradient(44deg, #0080ef, #00dcd9);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin secondary-text-gradient {
+  background: -webkit-linear-gradient(44deg, #ef003c, #dc0088);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin primary-transition {
+  transition: all 0.2s ease;
+}
