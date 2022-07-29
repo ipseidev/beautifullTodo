@@ -12,19 +12,20 @@ export default function ButtonAddTodo({
   return (
     <>
       <button
-        className={"todo__navbar-button--add"}
+        className={`todo__navbar-button--add ${toggleAdd && "todo__navbar-button--confirm"}`}
         type="submit"
         form="todoForm"
         onClick={(e) => {
-          console.log("JE SUIS ICI");
           if (!toggleAdd) {
-            console.log("par là")
             e.preventDefault();
             setToggleAdd(true);
           }
         }}
       >
-        <i className={`fa-solid fa-circle-${toggleAdd ? "check" : "plus"}`}></i>
+      <div className={"icon-container"}>
+        <i className={`fa-solid fa-check ${toggleAdd ? "scale-in" : "scale-out"}`}></i>
+      <i className={`fa-solid fa-plus ${toggleAdd ? "scale-out" : "scale-in"}`}></i>
+      </div>
       </button>
       {toggleAdd && (
         <i

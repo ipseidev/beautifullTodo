@@ -2,12 +2,12 @@
 @import "./mixins";
 * {
   font-family: "Inter", sans-serif;
-  color: #2f243b;
+  color: rgba(47, 36, 59, 0.98);
 }
 
 h1 {
   font-weight: 900;
-  font-size: 7rem;
+  font-size: 9rem;
 
   span {
     @include primary-text-gradient;
@@ -34,4 +34,9 @@ h2 {
 
 .fa-solid {
   @include primary-transition;
+}
+
+.todo__item-title {
+  font-size:1.3rem;
+  font-weight: 600;
 }

@@ -1,3 +1,7 @@
+@mixin primary-gradient {
+  background: linear-gradient(44deg, #0080ef, #00dcd9);
+}
+
 @mixin primary-text-gradient {
   background: -webkit-linear-gradient(44deg, #0080ef, #00dcd9);
   background-clip: border-box;
@@ -13,5 +17,5 @@
 }
 
 @mixin primary-transition {
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }

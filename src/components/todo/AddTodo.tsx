@@ -27,9 +27,7 @@ const AddTodo = ({ isOpen, setToggleAdd, addItem }: IAddtodo) => {
 
   return (
     <div className={`todo__add-item ${isOpen && "todo__add-item--active"}`}>
-      <div className="todo__add-item-header">
-        <h4 className="glass-title-light">add todo</h4>
-      </div>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="todo__input-container"
