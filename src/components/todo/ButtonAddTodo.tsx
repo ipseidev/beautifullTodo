@@ -16,9 +16,7 @@ export default function ButtonAddTodo({
         type="submit"
         form="todoForm"
         onClick={(e) => {
-          console.log("JE SUIS ICI");
           if (!toggleAdd) {
-            console.log("par là")
             e.preventDefault();
             setToggleAdd(true);
           }

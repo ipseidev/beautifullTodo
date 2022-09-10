@@ -2,31 +2,28 @@ import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { AddTodo } from "./AddTodo";
 import ButtonAddTodo from "./ButtonAddTodo";
+import axios from "axios";
 
 interface IFormInput {
   title: string;
   description: string;
+  id:string;
+  status:string;
 }
 
 const Todo = () => {
-  const [items, setItems] = React.useState([
-    {
-      id: 1,
-      order: 1,
-      title: "This is your first Todo.",
-      description: "And your description.",
-    },
-  ]);
+  const [items, setItems] = React.useState<any>([]);
   const [toggleAdd, setToggleAdd] = React.useState<boolean>(false);
 
   const todoContentRef =
     React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
-  const addItem = ({ title, description }: IFormInput) => {
+  const addItem = ({ title, description, id, status }: IFormInput) => {
     setItems([
       ...items,
       {
-        id: items.length + 1,
+        id: id,
+        status:status,
         order: items.length + 1,
         title,
         description,
@@ -34,7 +31,7 @@ const Todo = () => {
     ]);
   };
 
-  const deleteItem = (id: number) => {
+  const deleteItem = (id: string) => {
     setItems(items.filter((item) => item.id !== id));
   };
 
@@ -48,6 +45,16 @@ const Todo = () => {
       behavior: "smooth",
     });
   }, [items.length]);
+
+
+  React.useEffect(() => {
+    axios.get('http://localhost:3000/tasks').then(response => {
+      if(response.data) {
+        setItems(response.data);
+      }
+    })
+  }, [])
+
 
   return (
     <div className={"todo__container"}>
