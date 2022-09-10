@@ -12,7 +12,7 @@ export default function ButtonAddTodo({
   return (
     <>
       <button
-        className={"todo__navbar-button--add"}
+        className={`todo__navbar-button--add ${toggleAdd && "todo__navbar-button--confirm"}`}
         type="submit"
         form="todoForm"
         onClick={(e) => {
@@ -22,7 +22,10 @@ export default function ButtonAddTodo({
           }
         }}
       >
-        <i className={`fa-solid fa-circle-${toggleAdd ? "check" : "plus"}`}></i>
+      <div className={"icon-container"}>
+        <i className={`fa-solid fa-check ${toggleAdd ? "scale-in" : "scale-out"}`}></i>
+      <i className={`fa-solid fa-plus ${toggleAdd ? "scale-out" : "scale-in"}`}></i>
+      </div>
       </button>
       {toggleAdd && (
         <i
